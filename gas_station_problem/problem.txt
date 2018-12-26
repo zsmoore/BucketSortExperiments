@@ -1,0 +1,7 @@
+You want to travel from new york city to san francisco.
+
+You are given a list of mile markers that each contain a gas station in an unsorted list.
+
+Your car has a mileage of 50 miles.
+
+Print out the mile markers of the gas stations you will visit and visit the least amount possible.
