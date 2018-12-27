@@ -35,7 +35,7 @@ def get_gas_stations(mileage_list):
     while curr_distance != END_MILE:
         max_station = curr_distance
         for station in buckets[curr_bucket]:
-            if station < curr_distance + MILEAGE and station > max_station:
+            if station <= curr_distance + MILEAGE and station > max_station:
                 max_station = station
 
         if max_station == curr_distance:
