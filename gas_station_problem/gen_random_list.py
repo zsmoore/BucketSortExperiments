@@ -9,8 +9,8 @@ REQUIRED_STOPS = 10000 / 50
 
 def gen_list(num_elems):
 
-    out_list = []
-    for i in range(num_elems):
+    out_list = [END_MILE]
+    for i in range(num_elems - 1):
         out_list.append(random.randrange(0, END_MILE))
 
     return out_list
