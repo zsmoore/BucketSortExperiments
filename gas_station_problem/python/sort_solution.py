@@ -21,10 +21,11 @@ def get_gas_stations(mileage_list):
     current_mile = 0
     last_station = 0
     for station in sorted_list:
-        if station - current_mile > MILEAGE:
+        if station - current_mile >= MILEAGE:
             out_list.append(last_station)
-            current_mile = station
-        last_station = station
+            current_mile = last_station
+        else:
+            last_station = station
 
         if station == END_MILE:
             out_list.append(station)
@@ -43,6 +44,7 @@ def main():
     start = time.time()
     output_solution = get_gas_stations(input_list)
     end = time.time()
+    print(output_solution)
     print('Solution took:')
     print(end - start)
 
